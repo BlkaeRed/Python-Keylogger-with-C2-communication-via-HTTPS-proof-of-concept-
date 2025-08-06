@@ -14,8 +14,8 @@ The keylogger binary was created using PyInstaller for Linux systems. Surprising
 
 ## Webserver/app.py
 It is a simple Flask web server acting as a C2 system for receiving collected keystrokes.
-The index function handles both receiving and displaying the keystrokes. If it detects a POST request, the sent data is written into a file and then emitted to the WebSocket to dynamically show every new keystroke without needing to refresh the page.
+The index function handles both receiving and displaying the keystrokes. If it detects a POST request, the sent data is written into a file and then emitted to the WebSocket to dynamically show every new keystroke without needing to refresh the page.  
 <img width="558" height="493" alt="obraz" src="https://github.com/user-attachments/assets/e7a2eaa3-49c8-4352-9006-69a5a7a92e43" />
 
-The download function is purely for downloading the requested file, if it exists. The user can choose not to explicitly select a specific date; in that case, the website will automatically download the most recent file.
+The download function is purely for downloading the requested file, if it exists. The user can choose not to explicitly select a specific date; in that case, the website will automatically download the most recent file.  
 <img width="816" height="420" alt="obraz" src="https://github.com/user-attachments/assets/951624ba-8681-431a-9988-368ed6ccdc46" />
