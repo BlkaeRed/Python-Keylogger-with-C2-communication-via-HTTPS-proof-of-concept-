@@ -19,9 +19,7 @@ def index():
         send_data = request.get_json()
         with open(file_name, "a+") as file:
             file.write(send_data["message"])
-        
-        # Tu wysyłasz do przeglądarki przez WebSocket
-        socketio.emit('new_data', send_data["message"])
+                socketio.emit('new_data', send_data["message"])
         
         return 'Data received', 200
 
