@@ -4,6 +4,7 @@ import urllib3
 from threading import Thread
 import time
 
+wait=10
 delta_data=""
 urllib3.disable_warnings(category=urllib3.exceptions.InsecureRequestWarning)
 
@@ -30,7 +31,7 @@ def sender():
                 delta_data=""
             except:
                 pass
-            time.sleep(10)
+            time.sleep(wait)
 
 if __name__ == "__main__":
     thread2 = Thread(target=listener)
