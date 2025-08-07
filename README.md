@@ -4,12 +4,16 @@
 This project is a simple demonstration of a keylogger with the capability of sending keystrokes via an HTTPS connection. app.py is a simple Flask web app for receiving the keystrokes and dynamically displaying them on the screen using WebSockets. The app also saves all the detected keystrokes in files, with names corresponding to the date of creation, and allows downloading of said files.
 
 ## keylogger.py/keylogger
-keylogger.py is a simple keylogger written in Python, using the pynput library for capturing keystrokes and requests for sending the keystrokes.
+keylogger.py is a simple keylogger written in Python, using the pynput library for capturing keystrokes and requests for sending the keystrokes.  
 The listener is responsible for capturing keystrokes and saving them to a global variable delta_data. It is worth mentioning that special characters like Enter and Space will be shown in square brackets, e.g., [ENTER].
-The sender is responsible for actually sending the captured keystrokes to the C2 server via HTTPS. By default, it sends them every 10 seconds, but that can easily be adjusted by changing the wait variable. Lower values lead to a more real-time picture but might cause higher data loss.
+<img width="501" height="333" alt="obraz" src="https://github.com/user-attachments/assets/9c3e662c-bd5e-408c-abc0-720f11bd0ff5" />
+
+The sender is responsible for actually sending the captured keystrokes to the C2 server via HTTPS. By default, it sends them every 10 seconds, but that can easily be adjusted by changing the `wait` variable. Lower values lead to a more real-time picture but might cause higher data loss.
+<img width="676" height="303" alt="obraz" src="https://github.com/user-attachments/assets/d68831eb-38b0-427c-ba2c-520e9cdfdb3f" />
+
 The current script includes the line:
-"urllib3.disable_warnings(category=urllib3.exceptions.InsecureRequestWarning)"
-This is only here because, during testing, I was using a self-signed certificate, so the line was added to stop the script from constantly writing errors about untrusted TLS.
+`urllib3.disable_warnings(category=urllib3.exceptions.InsecureRequestWarning)`  
+This is only here because, during testing, I was using a self-signed certificate, so the line was added to stop the script from constantly writing errors about untrusted TLS.  
 The keylogger binary was created using PyInstaller for Linux systems. Surprisingly, it was not detected by my personal anti-malware, but to be fair, it is not the most complex malware and would probably be quite easily detectable in a real-world example.
 
 ## Webserver/app.py
