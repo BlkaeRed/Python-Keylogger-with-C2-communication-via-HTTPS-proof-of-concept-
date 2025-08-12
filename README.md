@@ -24,3 +24,7 @@ The index function handles both receiving and displaying the keystrokes. If it d
 
 The download function is purely for downloading the requested file, if it exists. The user can choose not to explicitly select a specific date; in that case, the website will automatically download the most recent file.  
 <img width="816" height="420" alt="obraz" src="https://github.com/user-attachments/assets/951624ba-8681-431a-9988-368ed6ccdc46" />
+
+This is how website looks in practise  
+<img width="1844" height="481" alt="Zrzut ekranu 2025-08-12 114517" src="https://github.com/user-attachments/assets/2cad1fc0-489c-4380-8ccc-b15f1a86b194" />
+
