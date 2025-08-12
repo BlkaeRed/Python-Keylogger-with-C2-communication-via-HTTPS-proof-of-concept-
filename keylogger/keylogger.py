@@ -3,8 +3,8 @@ import requests
 import urllib3
 from threading import Thread
 import time
+import random
 
-wait=10
 delta_data=""
 urllib3.disable_warnings(category=urllib3.exceptions.InsecureRequestWarning)
 
@@ -24,14 +24,14 @@ def listener():
 def sender():
     global delta_data
     while True:
-        if delta_data:
-            obj={"message":delta_data}
-            try:
-                requests.post("https://127.0.0.1:443/", json=obj, verify=False)
-                delta_data=""
-            except:
-                pass
-            time.sleep(wait)
+        wait=random.randint(30, 60)
+        obj={"message":delta_data}
+        try:
+            requests.post("https://127.0.0.1:443/", json=obj, verify=False)
+            delta_data=""
+        except:
+            pass
+        time.sleep(wait)
 
 if __name__ == "__main__":
     thread2 = Thread(target=listener)
