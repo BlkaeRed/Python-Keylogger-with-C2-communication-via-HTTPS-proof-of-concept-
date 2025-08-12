@@ -8,7 +8,7 @@ keylogger.py is a simple keylogger written in Python, using the pynput library f
 The listener is responsible for capturing keystrokes and saving them to a global variable delta_data. It is worth mentioning that special characters like Enter and Space will be shown in square brackets, e.g., [ENTER].
 <img width="501" height="333" alt="obraz" src="https://github.com/user-attachments/assets/9c3e662c-bd5e-408c-abc0-720f11bd0ff5" />
 
-The sender is responsible for actually sending the captured keystrokes to the C2 server via HTTPS. By default, it sends them every 30 to 60 seconds, but that can easily be adjusted by changing the `wait` variable. Lower values lead to a more real-time picture but might cause higher data loss.
+The sender is responsible for actually sending the captured keystrokes to the C2 server via HTTPS. By default, it sends them every 30 to 60 seconds, but that can easily be adjusted by changing the `wait` variable. Lower values lead to a more real-time picture but might cause higher data loss.  
 <img width="639" height="287" alt="obraz" src="https://github.com/user-attachments/assets/e27160c3-7b70-4c86-b534-c1ecba479896" />
 
 
